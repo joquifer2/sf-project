@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "sf_project"
+version = "0.1.0"
+description = "Proyecto dbt con BigQuery gestionado por Poetry"
+authors = ["Tu Nombre <tu.email@ejemplo.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+dbt-bigquery = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

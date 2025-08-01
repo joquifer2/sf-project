@@ -1,0 +1,44 @@
+name: 'sf_project'
+version: '1.0.0'
+profile: 'sf_project'
+
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  sf_project:
+    staging:
+      +materialized: view
+      +schema: stg
+    intermediate:
+      +materialized: table
+      +schema: int
+    marts:
+      +materialized: table
+      +schema: marts
+    dim:
+      +materialized: table
+      +schema: dim
+
+seeds:
+  sf_project:
+    +encoding: utf-8
+    +schema: dim
+    dim_service_category:
+      +column_types:
+        id: string
+        service: string
+        service_category: string
+    dim_services:
+      +column_types:
+        id: string
+        service: string
+        service_category: string

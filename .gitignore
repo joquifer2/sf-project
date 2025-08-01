@@ -1,0 +1,33 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Archivos de configuración sensibles
+dbt_profiles.yml
+profiles.yml
+credentials.json
+*.key
+*.pem
+
+# Archivos y carpetas generados por dbt
+target/
+logs/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de Jupyter
+.ipynb_checkpoints/
+
+# Archivos de VSCode
+.vscode/
+
+# Otros
+.env
